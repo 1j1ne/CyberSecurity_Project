@@ -6,7 +6,7 @@ element.addEventListener("keydown", function(event){
     output = event.key
 
     const outcome = {message: output} 
-    fetch("http://0.0.0.0:8080/log", {
+    fetch("log", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
