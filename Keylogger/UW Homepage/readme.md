@@ -13,7 +13,8 @@ The purpose of the project is to learn:
     - Flask 
     - Social engineering
 
-## How It Works
+```test
+How It Works
 User
  │
  │ Keyboard Input 
@@ -26,12 +27,11 @@ User
  │ 
  │ HTTP POST 
  ▼ 
- Flask Server
- │ 
+ |
+ │ Flask Server
  ▼ 
  Terminal / Log
-
-
+```
 ### 1. Frontend
 
 The test webpage is a University of Washington login page where it contains input feilds and keyboard events can be detected using JavaScript. It is intended to be the same as real webpage to imitate how real hackers could use keylogger with social engineering.
