@@ -9,5 +9,4 @@ def html():
 @app.route('/log',methods=['POST'])
 def post():
     param = request.get_json()
-    print(param)
     return "ok"
